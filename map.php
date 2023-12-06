@@ -13,7 +13,9 @@
     <title>Location</title>
     <style>
       .navbar {
-        background-color: #8b8787;
+        display:flex;
+        justify-content:right;
+        background-color: #89cff0;
         color: white;
         position: fixed;
         width: 100%;
@@ -22,6 +24,7 @@
       }
 
       .navbar ul {
+      
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -40,10 +43,11 @@
         text-align: center;
         padding: 4px 16px;
         text-decoration: none;
+        border-radius: 8px;
       }
 
       .navbar li a:hover {
-        background-color: #111;
+        background-color: steelblue;
       }
     </style>
   </head>

@@ -74,6 +74,9 @@ if (isset($_POST["submit_btn"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
+        *{
+            box-sizing:border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -87,7 +90,9 @@ if (isset($_POST["submit_btn"])) {
 
 
         .navbar {
-            background-color: #8b8787;
+            display: flex;
+            justify-content: right;
+            background-color: #89cff0;
             color: white;
             position: fixed;
             width: 100%;
@@ -111,6 +116,7 @@ if (isset($_POST["submit_btn"])) {
 
         .navbar li a {
             display: block;
+            border-radius: 8px;
             color: white;
             text-align: center;
             padding: 4px 16px;
@@ -118,13 +124,18 @@ if (isset($_POST["submit_btn"])) {
         }
 
         .navbar li a:hover {
-            background-color: #111;
+            background-color: steelblue;
         }
 
 
 
         .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: #fff;
+            margin-top: 7rem;
             padding: 50px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -180,6 +191,29 @@ if (isset($_POST["submit_btn"])) {
         .error {
             color: #ff0000;
         }
+
+        /* .button {
+            background-color: steelblue;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+
+        } */
+
+         button {
+            width: 100%;
+            height: 2rem;
+            border: none;
+            border-radius:8px;
+            cursor: pointer;
+            background-color: steelblue;
+            color: whitesmoke;
+        }
+        
+        button:hover {
+            opacity: 85%;
+        }
     </style>
 
     <script>
@@ -226,7 +260,9 @@ if (isset($_POST["submit_btn"])) {
             <div class="mb-3"><label class="form-label" for="name">Permanent Address</label><input class="form-control item" type="text" id="permanentAddress" name="permanentAddress" required></div>
             <div class="mb-3"><label class="form-label" for="name">Your Photo</label><input class="form-control" type="file" accept="image/*" id="profile_pic" name="profile_pic" required></div>
             <div class="mb-3"><label class="form-label" for="name">NID Soft Copy (PDF)</label><input class="form-control" accept="application/pdf" id="nidSoftCopy" name="nidSoftCopy" type="file" required></div>
-            <div class="mb-3 mt-4"><button class="btn btn-primary btn-lg d-block w-100" name="submit_btn" type="submit">Submit</button></div>
+            <div class = "button">
+            <button  name="submit_btn" type="submit">Submit</button>
+            </div>
 
         </form>
     </div>

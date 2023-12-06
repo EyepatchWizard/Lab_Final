@@ -58,13 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     button {
-      background-color: #04AA6D;
+      background-color: steelblue;
       color: white;
-      padding: 14px 20px;
+      padding: 14px 50%;
       margin: 8px 0;
       border: none;
       cursor: pointer;
       width: 100%;
+      border-radius: 15px;
     }
 
     button:hover {
@@ -80,6 +81,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .imgcontainer {
       text-align: center;
       margin: 24px 0 12px 0;
+    }
+
+    .position {
+      display: grid;
+      justify-content:center;
+      align-content: center;
+
+
     }
 
     img.avatar {
@@ -109,7 +118,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     .navbar {
-      background-color: #8b8787;
+      display: flex;
+      justify-content: right;
+      background-color: #89cff0;
       color: white;
       position: fixed;
       width: 100%;
@@ -132,6 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     .navbar li a {
+      border-radius: 8px;
       display: block;
       color: white;
       text-align: center;
@@ -140,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     .navbar li a:hover {
-      background-color: #111;
+      background-color: steelblue;
     }
   </style>
 </head>
@@ -165,6 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   ?>
 
+ <div class="position">
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <div class="container">
       <label for="uname"><b>Username</b></label>
@@ -173,9 +186,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pass" required>
 
-      <button name="login_btn" type="submit">Login</button>
+      <div><button name="login_btn" type="submit">Login</button></div>
     </div>
   </form>
+  </div>
   <br><br>
 
   <nav class="navbar">

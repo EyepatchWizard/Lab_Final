@@ -22,49 +22,54 @@ $result = $conn->query($sql);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Dashboard</title>
     <style>
-        .navbar {
-            background-color: gray;
-            color: white;
-            position: fixed;
-            top: 0;
-            padding: 10px;
-            z-index: 1000; /* Ensure the navbar is above other content */
-            width: 100%;
-        }
+       .navbar {
+    display: flex;
+    justify-content: right;
+    background-color: #89cff0;
+    color: whitesmoke;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px;
+}
 
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+   
+}
 
-        .navbar li {
-            display: inline;
-            margin-right: 20px;
-        }
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+    float: left;
+}
 
-        .navbar li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 4px 16px;
-            text-decoration: none;
-        }
+.navbar li a{
+  border-radius: 8px;
+   background-color: #89cff0;
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+}
 
-        .navbar li a:hover {
-            background-color: #111;
-        }
+.navbar li a:hover{
+    background-color: steelblue;
+}
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar d-flex justify-content-end">
+    <nav class="navbar">
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="license_application.php">License Forms</a></li>
-            <li><a href="login.php">Log In</a></li>
             <li><a href="map.php">Location</a></li>
 
         </ul>
